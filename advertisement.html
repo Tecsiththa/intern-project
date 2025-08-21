@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>View Advertisement - EarnCash</title>
+
+    <link rel="stylesheet" href="advertisement-style.css">
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1><a href="index.html">EarnCash</a></h1>
+            <div class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="dashboard.html">DASHBOARD</a>
+                <a href="index.html">LOGOUT</a>
+                
+            </div>
+        </div>
+    </nav>
+
+    <main class="ad-container">
+        <div class="ad-header">
+            <h2>Advertisement Viewing</h2>
+            <p class="earning-info" id="earningInfo">You will earn $0.05 for viewing this ad</p>
+        </div>
+
+        <div class="ad-stats">
+            <div class="stat-card">
+                <h4>Today's Earnings</h4>
+                <div class="value">$0.15</div>
+            </div>
+            <div class="stat-card">
+                <h4>Ads Viewed</h4>
+                <div class="value">3</div>
+            </div>
+            <div class="stat-card">
+                <h4>Time Remaining</h4>
+                <div class="value" id="timer">30s</div>
+            </div>
+        </div>
+
+        
+
+        <div class="ad-frame-container">
+            <!-- Demo placeholder - in real implementation this would be the masked iframe -->
+            <div class="ad-placeholder" id="adPlaceholder">
+                <div class="loading-spinner"></div>
+                <h3>Loading Advertisement...</h3>
+                <p>The advertisement is being loaded securely through our proxy system. The actual URL is hidden for your protection.</p>
+            </div>
+            
+            <!-- This iframe would be dynamically loaded with the masked URL -->
+            <iframe 
+                id="adIframe" 
+                class="ad-iframe" 
+                style="display: none;"
+                sandbox="allow-scripts allow-same-origin allow-forms"
+                loading="lazy">
+                Your browser doesn't support iframes.
+            </iframe>
+        </div>
+
+        <div class="ad-controls">
+            <div class="timer-container">
+                <p>Minimum viewing time: <span id="timerDisplay">30</span> seconds</p>
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+            </div>
+            
+            <button id="claimReward" class="btn btn-success" >
+                Claim Reward
+            </button>
+            
+            <a href="dashboard.html" class="btn btn-secondary">Back to Dashboard</a>
+        </div>
+    </main>
+
+    <footer>
+        <p></p>
+        <p></p>
+    </footer>
+   
+</body>
+</html>
