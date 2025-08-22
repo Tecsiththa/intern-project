@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+  <div class="container">
+    
+    <div id="notification" class="notification">
+      ✅ Profile updated successfully!
+    </div>
+
+    <!-- Profile Header -->
+    <div class="profile-header">
+      <div class="profile-avatar" onclick="document.getElementById('avatarInput').click()">
+        <span id="avatarText">JD</span>
+        <button class="avatar-upload" title="Change Photo">📷</button>
+      </div>
+      <input type="file" id="avatarInput" accept="image/*" style="display: none;" onchange="handleAvatarChange(event)">
+      <h1 class="profile-name" id="displayName">Sithum Vindana</h1>
+      <p class="profile-email" id="displayEmail">s.vindanawijethunga@email.com</p>
+      <span class="profile-status">Active Member</span>
+    </div>
+
+    <!-- Toggle Buttons -->
+    <div class="toggle-section">
+      <button class="toggle-btn active" onclick="showSection('personal')">Personal Info</button>
+      <button class="toggle-btn" onclick="showSection('security')">Security</button>
+      
+    </div>
+
+    <!-- Personal Information Section -->
+    <div id="personal-section" class="profile-form">
+      <form id="personalForm">
+        <div class="form-section">
+          <h3>Personal Information</h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" value="" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" value="" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" value="" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" value="">
+            </div>
+            <div class="form-group">
+              <label for="birthdate">Date of Birth</label>
+              <input type="date" id="birthdate" name="birthdate" value="">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="us">United States</option>
+                <option value="ca">Canada</option>
+                <option value="uk">United Kingdom</option>
+                <option value="au">Australia</option>
+                <option value="de">Sri Lanka</option>
+                <option value="fr">India</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="city">City</label>
+              <input type="text" id="city" name="city" value="">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="bio">Bio</label>
+            <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself...">Passionate about technology and always eager to learn new things.</textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+          <button type="button" class="btn btn-secondary" onclick="resetForm('personalForm')">Reset</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Security Section -->
+    <div id="security-section" class="profile-form" style="display: none;">
+      <form id="securityForm">
+        <div class="form-section">
+          <h3>Security Settings</h3>
+          <div class="form-group">
+            <label for="currentPassword">Current Password</label>
+            <input type="password" id="currentPassword" name="currentPassword" placeholder="Enter current password">
+          </div>
+          <div class="form-group">
+            <label for="newPassword">New Password</label>
+            <input type="password" id="newPassword" name="newPassword" placeholder="Enter new password">
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm New Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm new password">
+          </div>
+          <button type="submit" class="btn btn-primary">Update Password</button>
+          <button type="button" class="btn btn-secondary">Enable 2FA</button>
+        </div>
+      </form>
+    </div>
+
+
+    
+  </div>
+
+
+   <footer>
+        <p></p>
+        <p></p>
+    </footer>
+
+</body>
+</html>
