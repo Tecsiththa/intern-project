@@ -46,19 +46,19 @@
         
 
         <div class="ad-frame-container">
-            <!-- Demo placeholder - in real implementation this would be the masked iframe -->
+            <!-- the masked iframe -->
             <div class="ad-placeholder" id="adPlaceholder">
                 <div class="loading-spinner"></div>
                 <h3>Loading Advertisement...</h3>
                 <p>The advertisement is being loaded securely through our proxy system. The actual URL is hidden for your protection.</p>
             </div>
             
-            <!-- This iframe would be dynamically loaded with the masked URL -->
+            <!-- This iframe  loaded with the masked URL -->
             <iframe 
                 id="adIframe" 
                 class="ad-iframe" 
                 style="display: none;"
-                sandbox="allow-scripts allow-same-origin allow-forms"
+                sandbox="allow-scripts allow-forms allow-popups"
                 loading="lazy">
                 Your browser doesn't support iframes.
             </iframe>
@@ -76,7 +76,7 @@
                 Claim Reward
             </button>
             
-            <a href="dashboard.html" class="btn btn-secondary">Back to Dashboard</a>
+            <a href="dashboard.html" class="btn btn-secondary">Goes to Dashboard</a>
         </div>
     </main>
 
